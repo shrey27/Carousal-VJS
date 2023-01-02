@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background-color: rgb(163, 163, 163);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 7.5vmin;
+}
+
+.carousal-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousal{
+    width: 92%;
+    height: 600px;
+    max-width: 2000px;
+    position: relative;
+}
+
+.btn{
+    width: 50px;
+    position: absolute;
+    height: 50px;
+    border-radius: 50%;
+    top:50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: rgb(247, 244, 244);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.btn--left{
+    left:5px;
+}
+
+.btn--right {
+    right: 5px;
+}
+
+.slider--wrap{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.slider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    transform: translateX(-100%);
+}
+
+.slider--item{
+    height: 100%;
+    flex: 1 0 100%;
+}
+
+.slider--marker{
+    height: 10px;
+    width: fit-content;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);   
+}
+
+.slider--marker--items{
+    border: 5px solid red;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(197, 187, 187);
+    margin: 0 0.25rem;
+    cursor: pointer;
+}
+
+.slider--marker--items.selected{
+    background-color: red;
+}
