@@ -17,7 +17,7 @@ function createSliderItems() {
   let firstNode, lastNode;
   for (let i = 1; i <= IMAGES; i++) {
     const img = document.createElement("img");
-    img.src = `img_${i}.jpg`;
+    img.src = `images/img_${i}.jpg`;
     img.classList.add("slider--item");
     slider.append(img);
     sliderItems.push(img);
